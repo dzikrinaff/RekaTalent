@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RekaTalent.Data;
 
@@ -11,9 +12,11 @@ using RekaTalent.Data;
 namespace RekaTalent.Migrations
 {
     [DbContext(typeof(RekaTalentDbContext))]
-    partial class RekaTalentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241128023951_new")]
+    partial class @new
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
